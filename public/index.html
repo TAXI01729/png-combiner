@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4枚のPNGを結合するツール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1>4枚のPNGを結合するツール</h1>
+
+    <p class="description">
+      1920×1080のPNG画像を4枚選択すると、2×2に結合します
+    </p>
+
+    <form id="upload-form">
+
+      <div class="image-slot">
+        <label for="images">① 左上の画像</label>
+        <input type="file" id="images" name="images"
+          accept="image/png" required>
+      </div>
+
+      <div class="image-slot">
+        <label for="image-2">② 右上の画像</label>
+        <input type="file" id="image-2" name="images"
+          accept="image/png" required>
+      </div>
+
+      <div class="image-slot">
+        <label for="image-3">③ 左下の画像</label>
+        <input type="file" id="image-3" name="images"
+          accept="image/png" required>
+      </div>
+
+      <div class="image-slot">
+        <label for="image-4">④ 右下の画像</label>
+        <input type="file" id="image-4" name="images"
+          accept="image/png" required>
+      </div>
+
+      <div id="preview" class="preview"></div>
+
+      <button type="submit" id="submit-button">
+        画像を結合してダウンロード
+      </button>
+
+    </form>
+
+    <p id="status" role="status"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
